@@ -11,7 +11,7 @@ class HTMLNode():
         raise NotImplementedError
         
     def props_to_html(self):
-        return reduce(lambda x, key: f"{x} {key}=\"{self.props[key]}\"", self.props, "")
+        return "" if self.props == None else reduce(lambda x, key: f"{x} {key}=\"{self.props[key]}\"", self.props, "")
         
     def __repr__(self):
         children_string = "None" if self.children == None else ", ".join([child.value for child in self.children])
