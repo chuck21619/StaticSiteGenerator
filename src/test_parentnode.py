@@ -13,5 +13,8 @@ class TestParentNode(unittest.TestCase):
         print(node.to_html())
         self.assertEqual(node.to_html(), "<p><b>Bold text</b>Normal text<i>italic text</i>Normal text</p>")
 
+#   '<b>Bold text</b>Normal text<i>italic text</i>Normal text'
+#'<p><b>Bold text</b>Normal text<i>italic text</i>Normal text</p>'
+        
 if __name__ == "__main__":
     unittest.main()
